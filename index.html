@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniversário migs</title>
+</head>
+<style>header{
+    background-color: rgb(87, 201, 201);
+    text-align: center;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+#header-img{
+    position:absolute;
+    width: 65px;
+    top: 8px;
+    left: 17px;
+    }
+body {
+    margin-top: 300px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.options {
+    margin: 20px;
+}
+
+button{
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-radius: 100px;
+    background-color: rgb(87, 201, 201);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#button-2{
+color: aliceblue;
+}
+
+
+#resultado {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+footer{
+    background-color: rgb(87, 201, 201);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    }
+    </style>
+<body>
+<header>
+        <img src="g png.webp" id="header-img">
+        <h1>Seja bem-vinda!</h1>
+</header>
+    
+    <h2>Você deseja ir para a próxima página?</h2>
+    <div class="options">
+        <button id="#button-2""><a href="parabens.html" >"Sim"</button></a>
+        <button id="naoBtn">Não</button>
+    </div>
+    <div id="resultado"></div>
+
+    <footer>
+    <p><strong>De: Migs!</strong></p>
+    <p><strong>Para: A melhor migs!</strong></p>
+    </footer>
+<script>
+const naoBtn = document.getElementById("naoBtn");
+const resultado = document.getElementById("resultado");
+        
+naoBtn.addEventListener("mouseover", () => {
+const maxX = window.innerWidth - naoBtn.clientWidth;
+const maxY = window.innerHeight - naoBtn.clientHeight;
+const randomX = Math.random() * maxX;
+const randomY = Math.random() * maxY;
+        
+naoBtn.style.transition = "transform 1s";
+naoBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+});
+        
+naoBtn.addEventListener("click", () => {
+resultado.textContent = "Resposta incorreta!";
+resultado.style.color = "red";
+});
+</script>
+</body>
+</html>
